@@ -33,7 +33,8 @@ export default function Heading() {
                     <div className="nav-buttons">
                         <button onClick={showForm}>Log in</button>
                         <button>Sign Up</button>
-                        <Username/>
+                        {/* FIX THIS */}
+                        <Username/>   
                     </div>
                 </nav>
             </div>

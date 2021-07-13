@@ -7,7 +7,6 @@ export default function Username(username) {
     return (
         <div>
             {showName}
-            {JSON.stringify(username)}
 
         </div>
     )
