@@ -101,3 +101,45 @@
   margin-right: 5px;
   padding: 5px;
 }
+
+.login-hidden {
+  display: none;
+}
+
+.login-container {
+  border: black solid 2px;
+  background-color: #b5bcc9;
+  margin-top: 40px;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: grid;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+  padding: 5px;
+}
+
+.input-containers {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.input-containers label {
+  text-align: right;
+  padding-right: 15px;
+  font-size: 14pt;
+}
+
+.input-containers input {
+  margin-right: 25px;
+}
+
+.login-submit {
+  padding: 5px;
+}
+
+.login-submit button {
+  padding: 7px;
+  border: solid blue 2px;
+  border-radius: 10px;
+}
+
+
