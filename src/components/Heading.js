@@ -1,9 +1,16 @@
 import React from 'react'
 import LoginForm from "./LoginForm.js"
 import Username from "./Username.js"
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 export default function Heading() {
     let counter = 0;
+    let menuCounter = 0;
 
     function showForm() {
         console.log('yyy');
@@ -18,6 +25,17 @@ export default function Heading() {
         } counter += 1;
     }
 
+    function showMenu() {
+        let menu = document.getElementById('menu');
+        if (menuCounter % 2 === 0) {
+            menu.style.display = "block";
+            
+        } else {
+            menu.style.display = "none";
+        } menuCounter++;
+        
+    }
+
     return (
         <>
             <div className="top-heading">
@@ -26,9 +44,16 @@ export default function Heading() {
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><Link to="/"><a href="#">HOME</a></Link></li>
+                        <div className="dropdown">
+                            <li><a href="#" onClick={showMenu}>ABOUT</a></li>
+                                <ul className="dropdown-content" id="menu">
+                                    <li><a href="#">History of Astronomy</a></li>
+                                    <li><a href="#">NASA</a></li>
+                                    <li><a href="#">SpaceX</a></li>
+                                </ul>
+                        </div>
+                        <li><Link to="/contact"><a href="#">CONTACT</a></Link></li>
                     </ul>
                     <div className="nav-buttons">
                         <button onClick={showForm}>Log in</button>

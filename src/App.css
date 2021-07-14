@@ -40,6 +40,14 @@
   }
 }
 
+@keyframes Main-background {
+  0% {background-color: silver}
+  25% {background-color: rgb(169, 168, 168)}
+  50% {background-color: rgb(138, 136, 136);}
+  75% {background-color: rgb(169, 168, 168)}
+  100% {background-color: silver;}
+}
+
 .home-pic {
   width: 66%;
   margin-left: 10%;
@@ -99,6 +107,39 @@
   font-weight: bold;
 }
 
+.dropdown-content {
+  display: none;
+  background-color: #7f838a;
+  justify-content: center;
+  padding: 0px;
+  width: 80%;
+}
+
+.dropdown-content li {
+  padding: 0px;
+  width: 100%;
+  border-bottom: solid rgb(87, 86, 86) 1px;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content li a {
+  font-size: 10pt;
+}
+
+.dropdown {
+  justify-content: center;
+}
+
+#menu {
+  display: none;
+  font-size: 12pt;
+  margin: 0px;
+  margin-left: 5px;
+}
+
 #heading-container {
   background-image: linear-gradient(180deg, grey, rgb(55, 54, 54));
   text-align: center;
@@ -113,6 +154,7 @@
   position: sticky;
   top: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .main {
@@ -120,6 +162,9 @@
   margin-left: 8%;
   margin-right: 8%;
   background-color: rgb(95, 94, 94);
+  animation-name: Main-background;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
 }
 
 .nav-buttons {
