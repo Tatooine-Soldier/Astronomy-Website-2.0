@@ -21,7 +21,7 @@ export default function Home() {
         } else if (counter === 3) {
             rocket.style.display = "block";
         } 
-        setTimeout(slideshow, 5000);
+        setTimeout(slideshow, 6000);
     }
 
     return (
@@ -38,7 +38,12 @@ export default function Home() {
                 </div>
             </div>
             <div className="intro-container">
-                Apollo 15 nbjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+                <div className="intro-content">
+                    <div className="main-title">
+                        <h1>EXPLORE</h1>
+                    </div>
+                    <p>The universe is waiting for you... </p>
+                </div>
             </div>
             {window.onload = (e) => slideshow()}
         </div>
