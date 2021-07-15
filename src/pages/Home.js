@@ -1,6 +1,9 @@
-import React from 'react'
+import {React, useState} from 'react'
 
 export default function Home() {
+    const [planet, setPlanet] = useState("")
+    const [weight, setWeight] = useState(0.0)
+    const [calculatedWeight, setCalculatedWeight] = useState(0.0)
     let counter = 0;
     function slideshow() {
         let astro = document.getElementById("astronaut-pic");
@@ -24,9 +27,33 @@ export default function Home() {
         setTimeout(slideshow, 6000);
     }
 
-    function calculateWeight(e) {
-        e.preventDefault()
-        
+    function calculateWeight() {
+        console.log("calculating weight")
+        switch(planet) {
+            case "venus" :
+                setCalculatedWeight(weight*1.1);
+                break;
+            case "mars" :
+                setCalculatedWeight(weight*1.1);
+                break;
+            case "jupiter" :
+                setCalculatedWeight(weight*1.1);
+                break;
+            case "saturn" :
+                setCalculatedWeight(weight*1.1);
+                break;
+            case "uranus" :
+                setCalculatedWeight(weight*1.1);
+                break;
+            case "neptune" :
+                setCalculatedWeight(weight*1.1);
+                break;
+            case "black hole" :
+                setCalculatedWeight(weight*1400);
+                break;
+            default:
+                setCalculatedWeight(weight);
+        }
     }
 
     return (
@@ -113,19 +140,27 @@ export default function Home() {
                     </table>
                     <div>
                         <label htmlFor="weight-input">Weight in kg: </label>
-                        <input type="text" id="weight-input" name="weight-input" placeholder="eg. 73.5"/>
-                        <form onSubmit={calculateWeight}>
-                            <select>
+                        <input type="text" id="weight-input" name="weight-input" placeholder="eg. 73.5" onChange={(e)=>setWeight(e.target.value)}/>
+                            <select onChange={(e)=> {
+                                const selectedPlanet = e.target.value;
+                                setPlanet(selectedPlanet);
+                                if (weight) {
+                                    calculateWeight()
+                                }
+                                }}>
                                 <option value="venus" >Venus</option>
                                 <option value="mars" >Mars</option>
                                 <option value="jupiter" >Jupiter</option>
                                 <option value="saturn" >Saturn</option>
                                 <option value="uranus" >Uranus</option>
                                 <option value="neptune" >Neptune</option>
-                                <option value="bhole" >Black Hole</option>
+                                <option value="black hole" >Black Hole</option>
                             </select>
-                            <input type="submit" />
-                        </form>
+                            
+                        <div>
+                            <p>You weigh {calculatedWeight} on {planet}</p>
+                        </div>
+                            
                     </div>
                 </div>
             </div>
