@@ -24,6 +24,11 @@ export default function Home() {
         setTimeout(slideshow, 6000);
     }
 
+    function calculateWeight(e) {
+        e.preventDefault()
+        
+    }
+
     return (
         <div className="main" id="main">
             <div className="carousel-container">        
@@ -57,8 +62,71 @@ export default function Home() {
                     <p>So many unanswered questions... </p>
                 </div>
                 <div className="secondary-intro-content">
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum  </p>
-                    <p>Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Planet Name</th>
+                                <th>Diameter Size</th> 
+                                <th>Distance from Earth</th>
+                            </tr>
+                            <tr>
+                                <td>Mercury</td>
+                                <td>.7</td>
+                                <td>57,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Venus</td>
+                                <td>.7</td>
+                                <td>108,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Earth</td>
+                                <td>.7</td>
+                                <td>149,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Mars</td>
+                                <td>.7</td>
+                                <td>227,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Jupiter</td>
+                                <td>.7</td>
+                                <td>778,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Saturn</td>
+                                <td>.7</td>
+                                <td>1,438,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Uranus</td>
+                                <td>.7</td>
+                                <td>2,871,000,000 km</td>
+                            </tr>
+                            <tr>
+                                <td>Neptune</td>
+                                <td>.7</td>
+                                <td>4,495,000,000 km</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <label htmlFor="weight-input">Weight in kg: </label>
+                        <input type="text" id="weight-input" name="weight-input" placeholder="eg. 73.5"/>
+                        <form onSubmit={calculateWeight}>
+                            <select>
+                                <option value="venus" >Venus</option>
+                                <option value="mars" >Mars</option>
+                                <option value="jupiter" >Jupiter</option>
+                                <option value="saturn" >Saturn</option>
+                                <option value="uranus" >Uranus</option>
+                                <option value="neptune" >Neptune</option>
+                                <option value="bhole" >Black Hole</option>
+                            </select>
+                            <input type="submit" />
+                        </form>
+                    </div>
                 </div>
             </div>
             {window.onload = (e) => slideshow()}
