@@ -29,27 +29,29 @@ export default function Home() {
 
     function calculateWeight(dplanet) {
         console.log("calculating weight")
+        let appear = document.getElementById("weight-results")
+        appear.style.display = "block"
         switch(dplanet) {
             case "venus" :
-                setCalculatedWeight(weight*1.1);
+                setCalculatedWeight(weight*.9);
                 break;
             case "mars" :
-                setCalculatedWeight(weight*1.1);
+                setCalculatedWeight(weight*.38);
                 break;
             case "jupiter" :
-                setCalculatedWeight(weight*1.1);
+                setCalculatedWeight(weight*2.4);
                 break;
             case "saturn" :
-                setCalculatedWeight(weight*1.1);
+                setCalculatedWeight(weight*1.07);
                 break;
             case "uranus" :
-                setCalculatedWeight(weight*1.1);
+                setCalculatedWeight(weight*.87);
                 break;
             case "neptune" :
                 setCalculatedWeight(weight*1.1);
                 break;
             case "black hole" :
-                setCalculatedWeight(weight*1400000);
+                setCalculatedWeight(weight*14000000);
                 break;
             default:
                 setCalculatedWeight(weight);
@@ -98,42 +100,42 @@ export default function Home() {
                             </tr>
                             <tr>
                                 <td>Mercury</td>
-                                <td>.7</td>
+                                <td>4,800 km</td>
                                 <td>57,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Venus</td>
-                                <td>.7</td>
+                                <td>12,100 km</td>
                                 <td>108,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Earth</td>
-                                <td>.7</td>
+                                <td>12,700 km</td>
                                 <td>149,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Mars</td>
-                                <td>.7</td>
+                                <td>6,700 km</td>
                                 <td>227,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Jupiter</td>
-                                <td>.7</td>
+                                <td>142,900 km</td>
                                 <td>778,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Saturn</td>
-                                <td>.7</td>
+                                <td>120,500 km</td>
                                 <td>1,438,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Uranus</td>
-                                <td>.7</td>
+                                <td>51,100 km</td>
                                 <td>2,871,000,000 km</td>
                             </tr>
                             <tr>
                                 <td>Neptune</td>
-                                <td>.7</td>
+                                <td>49,500 km</td>
                                 <td>4,495,000,000 km</td>
                             </tr>
                         </tbody>
@@ -160,7 +162,7 @@ export default function Home() {
                                 </select>
                         </div>
                             
-                        <div className="weight-results">
+                        <div className="weight-results" id="weight-results">
                             <p>You would weigh {calculatedWeight}kgs on {planet}</p>
                         </div>
                             
