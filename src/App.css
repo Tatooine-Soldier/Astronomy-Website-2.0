@@ -97,6 +97,7 @@
   border: solid 1px black;
   display: grid;
   grid-template-columns: 50% 50%;
+  padding-bottom: 10px;
 }
 
 .main-title {
@@ -277,6 +278,20 @@ table tr th {
   padding: 5px;
 }
 
+.weight-input {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.weight-results {
+  border: solid 3px black;
+  background-color: rgb(65, 64, 64);
+  border-radius: 15px;
+  color: white;
+  margin-top: 5px;
+  margin-left: 16%;
+  margin-right: 16%;
+}
 
 
 

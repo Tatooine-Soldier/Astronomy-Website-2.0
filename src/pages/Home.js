@@ -27,9 +27,9 @@ export default function Home() {
         setTimeout(slideshow, 6000);
     }
 
-    function calculateWeight() {
+    function calculateWeight(dplanet) {
         console.log("calculating weight")
-        switch(planet) {
+        switch(dplanet) {
             case "venus" :
                 setCalculatedWeight(weight*1.1);
                 break;
@@ -49,7 +49,7 @@ export default function Home() {
                 setCalculatedWeight(weight*1.1);
                 break;
             case "black hole" :
-                setCalculatedWeight(weight*1400);
+                setCalculatedWeight(weight*1400000);
                 break;
             default:
                 setCalculatedWeight(weight);
@@ -138,27 +138,30 @@ export default function Home() {
                             </tr>
                         </tbody>
                     </table>
-                    <div>
-                        <label htmlFor="weight-input">Weight in kg: </label>
-                        <input type="text" id="weight-input" name="weight-input" placeholder="eg. 73.5" onChange={(e)=>setWeight(e.target.value)}/>
-                            <select onChange={(e)=> {
-                                const selectedPlanet = e.target.value;
-                                setPlanet(selectedPlanet);
-                                if (weight) {
-                                    calculateWeight()
-                                }
-                                }}>
-                                <option value="venus" >Venus</option>
-                                <option value="mars" >Mars</option>
-                                <option value="jupiter" >Jupiter</option>
-                                <option value="saturn" >Saturn</option>
-                                <option value="uranus" >Uranus</option>
-                                <option value="neptune" >Neptune</option>
-                                <option value="black hole" >Black Hole</option>
-                            </select>
+                    <div className="weight-section">
+                        <div className="weight-input">
+                            <label htmlFor="weight-input">Weight in kg: </label>
+                            <input type="text" id="weight-input" name="weight-input" placeholder="eg. 73.5" onChange={(e)=>setWeight(e.target.value)}/>
+                                <select onChange={(e)=> {
+                                    const selectedPlanet = e.target.value;
+                                    setPlanet(e.target.value);
+                                    if (weight) {
+                                        calculateWeight(e.target.value)
+                                        console.log(e.target.value, weight)
+                                    }
+                                    }}>
+                                    <option value="venus" >Venus</option>
+                                    <option value="mars" >Mars</option>
+                                    <option value="jupiter" >Jupiter</option>
+                                    <option value="saturn" >Saturn</option>
+                                    <option value="uranus" >Uranus</option>
+                                    <option value="neptune" >Neptune</option>
+                                    <option value="black hole" >Black Hole</option>
+                                </select>
+                        </div>
                             
-                        <div>
-                            <p>You weigh {calculatedWeight} on {planet}</p>
+                        <div className="weight-results">
+                            <p>You would weigh {calculatedWeight}kgs on {planet}</p>
                         </div>
                             
                     </div>
