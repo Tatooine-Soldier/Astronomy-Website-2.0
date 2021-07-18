@@ -302,5 +302,51 @@ table tr th {
   margin-left: 40%;
 }
 
+@media screen and (max-width: 500px) {
+ .main {
+   margin-left: 0%;
+   margin-right: 0%;
+ }
+
+ .home-pic {
+   height: 350px;
+ }
+
+ nav {
+   grid-template-columns: 30% 70%;
+ }
+
+ .top-heading nav ul {
+   margin-left: 0px;
+ }
+
+ .top-heading nav ul li {
+   margin-right: 5px;
+   margin-left: 5px;
+   font-size: 12pt;
+  }
+
+  .top-heading nav ul li a {
+    padding: 0px;
+  }
+
+  .nav-buttons button {
+    padding: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .intro-content {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .secondary-intro-content {
+    margin-top: 10px;
+    display: block;
+    padding-right: 10px;
+  }
+}
+
 
 
