@@ -2,8 +2,11 @@ import React from 'react'
 
 export default function Contact() {
     return (
-        <div>
+        <div className="main">
             Contact
+            <div className="icons-containers">
+                
+            </div>
         </div>
     )
 }
