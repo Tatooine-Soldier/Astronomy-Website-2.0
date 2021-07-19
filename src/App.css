@@ -302,6 +302,28 @@ table tr th {
   margin-left: 40%;
 }
 
+.icons-container {
+  margin-left: 21%;
+  margin-right: 21%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.media-icons {
+  width: 80px;
+  height: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 500px) {
  .main {
    margin-left: 0%;
