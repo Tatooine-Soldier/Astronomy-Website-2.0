@@ -302,6 +302,11 @@ table tr th {
   margin-left: 40%;
 }
 
+.contacts-container {
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
 .icons-container {
   margin-left: 21%;
   margin-right: 21%;
@@ -312,6 +317,8 @@ table tr th {
 .media-icons {
   width: 80px;
   height: 80px;
+  border: solid 1px grey;
+  border-radius: 20px;
 }
 
 
