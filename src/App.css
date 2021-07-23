@@ -313,6 +313,8 @@ table tr th {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
   padding: 10px;
+  background-color: grey;
+  align-items: center;  
 }
 
 .media-icons {
@@ -325,6 +327,10 @@ table tr th {
 .email-container {
   margin-top: 30px;
   border: 1px grey solid;
+  padding-bottom: 50px;
+  margin-left: 21%;
+  margin-right: 21%;
+  background-color: grey;
 }
 
 
