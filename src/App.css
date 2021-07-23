@@ -312,6 +312,7 @@ table tr th {
   margin-right: 21%;
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
+  padding: 10px;
 }
 
 .media-icons {
@@ -319,6 +320,11 @@ table tr th {
   height: 80px;
   border: solid 1px grey;
   border-radius: 20px;
+}
+
+.email-container {
+  margin-top: 30px;
+  border: 1px grey solid;
 }
 
 
