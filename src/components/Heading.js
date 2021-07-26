@@ -48,9 +48,9 @@ export default function Heading() {
                         <div className="dropdown">
                             <li><a href="#" onClick={showMenu}>ABOUT</a></li>
                                 <ul className="dropdown-content" id="menu">
-                                    <li><a href="#">History</a></li>
-                                    <li><a href="#">NASA</a></li>
-                                    <li><a href="#">SpaceX</a></li>
+                                    <li><Link to="/history"><a href="#">History</a></Link></li>
+                                    <li><Link to="/nasa"><a href="#">NASA</a></Link></li>
+                                    <li><Link to="/spacex"><a href="#">SpaceX</a></Link></li>
                                 </ul>
                         </div>
                         <li><Link to="/contact"><a href="#">CONTACT</a></Link></li>

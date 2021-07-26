@@ -11,6 +11,10 @@ import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import Nav from "./components/Nav.js"
 import Heading from "./components/Heading.js"
+import NASA from "./pages/NASA.js"
+import History from "./pages/History.js"
+import Spacex from "./pages/Spacex.js"
+
 
 function App() {
   return (
@@ -21,6 +25,9 @@ function App() {
           <Route path="/" exact component={Home}></Route>
           <Route path="/about" component={About}></Route>
           <Route path="/contact" component={Contact}></Route>
+          <Route path="/history" exact component={History}></Route>
+          <Route path="/nasa" component={NASA}></Route>
+          <Route path="/spacex" component={Spacex}></Route>
         </Switch>
         
       </div>
